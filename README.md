@@ -1,7 +1,7 @@
 # rime-trjung
 Custom [Rime](https://github.com/rime) input method using the custom RS romanization scheme.
 
-Built on top of [rime-trjuwngkux](https://github.com/shinzoqchiuq/rime-trjuwngkux)
+Built on top of [rime-trjuwngkux](https://github.com/shinzoqchiuq/rime-trjuwngkux) using RIME's regex engine
 
 The scheme is documented below
 
