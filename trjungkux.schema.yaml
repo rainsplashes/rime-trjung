@@ -63,6 +63,8 @@ speller:
       - derive/H/h/
       - derive/'//
       - derive/\+/v/
+      - derive/Q/q/
+      - derive/F/f/
       # 簡拼
       - abbrev/\b([a-z']).+$/$1/
       - abbrev/\b([ptk]h||ng|t?sy?r?h?|d?zy?r?|[dtn]r|ny).+$/$1/
@@ -155,7 +157,9 @@ polyhedron2rs:
   - xform/(?<!j|w)i([aeou])/j$1/
   - xform/(rh?w?)a/$1ae/
   - xform/(rh?w?)e/$1ea/
-  - xform/\b(ph?|b|m|kh?|g|ng|x|h|q)r(w?)([ae])/$1$2$3/
+  #- xform/\b(ph?|b|m|kh?|g|ng|x|h|q)r(w?)([ae])/$1$2$3/
+  # fix - added l so that lrangX can change to laengX
+  - xform/\b(l|ph?|b|m|kh?|g|ng|x|h|q)r(w?)([ae])/$1$2$3/
   # 通攝
   - xform/wu(ng|k)/ow$1/
   - xform/(?<!r|h)u(ng|k)/uw$1/
@@ -202,6 +206,8 @@ polyhedron2rs:
   - xform/\b(t?s|d?z)(rh?j)e(ng|k)/$1$2ae$3/
   # 曾攝
   - xform/jwk/wik/
+  # had to add this because zyenpheng.dict strangely includes both -iik and -ik? (prob a bug because there is no iing, and wang renxu qieyun doesn't distinguish iik and ik)
+  - xform/iik/ik/
   # 流攝
   - xform/(?<!a|e)u(\b|x|h)/uw$1/
   - xform/jw(\b|x|h)/jiw$1/
@@ -415,7 +421,8 @@ polyhedron2rs:
   - xform/rQr/r
 
   # if r comes after a coronal, the chongniu processing was done incorrectly, undo it. this is because baxter -je is used to write both -rie and -ie depending on initial
-  - xform/\b(tshy|dzy|tsy|t|th|d|n|ts|tsh|dz|s|z|l|y|ny|sy|zy)Qr/$1Q/
+  # (?!a) to allow laeng > lrang (division 2 is fine but rare)
+  - xform/\b(tshy|dzy|tsy|t|th|d|n|ts|tsh|dz|s|z|l|y|ny|sy|zy)Qr(?!a)/$1Q/
 
   # yj clusters > y (yQj > y)
   # it is important that this rules comes after the previous one, because of input like yQrjep
