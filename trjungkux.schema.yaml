@@ -335,11 +335,11 @@ polyhedron2rs:
   # -aen/t > ran/t
   - xform/Qae(n|t)(?!F)(\b|X|H)/Qra$1F$2
   # -waen > rwan
-  - xform/Qwae(n|t)(?!F)(\b|X|H)/Qwra$1F$2
+  - xform/Qwae(n|t)(?!F)(\b|X|H)/Qrwa$1F$2
   # -ean/t > ren/t
   - xform/Qea(n|t)(?!F)(\b|X|H)/Qre$1F$2
   # -wean > rwen
-  - xform/Qwea(n|t)(?!F)(\b|X|H)/Qwre$1F$2
+  - xform/Qwea(n|t)(?!F)(\b|X|H)/Qrwe$1F$2
   # -jien > jen
   - xform/Qjie(n|t)(?!F)(\b|X|H)/Qje$1F$2
   # -jwien > jwen
@@ -373,15 +373,15 @@ polyhedron2rs:
   # -aeng/k > rang/k  
   - xform/Qae(ng|k)(?!F)(\b|X|H)/Qra$1F$2
   # -waeng > rwang
-  - xform/Qwae(ng|k)(?!F)(\b|X|H)/Qwra$1F$2
+  - xform/Qwae(ng|k)(?!F)(\b|X|H)/Qrwa$1F$2
   # -jaeng > rjang
   - xform/Qjae(ng|k)(?!F)(\b|X|H)/Qrja$1F$2
   # -jwaeng > rjwang
-  - xform/Qjwae(ng|k)(?!F)(\b|X|H)/Qjwra$1F$2
+  - xform/Qjwae(ng|k)(?!F)(\b|X|H)/Qrjwa$1F$2
   # -eang/k > reng/k  
   - xform/Qea(ng|k)(?!F)(\b|X|H)/Qre$1F$2
   # -weang > rweng
-  - xform/Qwea(ng|k)(?!F)(\b|X|H)/Qwre$1F$2
+  - xform/Qwea(ng|k)(?!F)(\b|X|H)/Qrwe$1F$2
   # -jieng/k > jeng/k (make 清 always spelled the same)
   - xform/Qjie(ng|k)(?!F)(\b|X|H)/Qje$1F$2
   # -jwieng > jweng
