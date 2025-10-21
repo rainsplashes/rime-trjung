@@ -217,6 +217,11 @@ polyhedron2rs:
 
   - xform/q/'/
 
+  # fixed bug with original that causes 矣 to be hjX and not hiX
+  - xform/\bhj(\b|x|h)/hi$1
+
+
+
   #moved part of it to end because it will be needed later
   - xlit/YU/yu/
   - xform/y(h?)j+/y$1/
