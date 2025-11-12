@@ -1,6 +1,8 @@
 # rime-trjung
 Custom [Rime](https://github.com/rime) input method using the custom RS romanization scheme.
 
+The parser program converts character data into a dictionary file for RIME.
+
 Built on top of [rime-trjuwngkux](https://github.com/shinzoqchiuq/rime-trjuwngkux) using RIME's regex engine
 
 The scheme is documented below
